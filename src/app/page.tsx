@@ -66,10 +66,18 @@ export default function HomePage() {
               href={item.href}
               className="nex-glass group rounded-lg p-5 transition hover:border-nex-blue/40"
             >
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-3">
                 <h3 className="font-semibold text-nex-white group-hover:text-nex-blue">{item.name}</h3>
                 <StatusPill label={item.label} />
               </div>
+              <p className="mt-3 text-sm leading-6 text-nex-muted">
+                {item.name === "NEX Mini" && "Indoor assist prototype for repeating hospitality and facility tasks."}
+                {item.name === "NEX One" && "Full-size humanoid concept for shift work that still needs a person nearby."}
+                {item.name === "NEX OS" && "Task planning layer that turns a work order into a supervised motion plan."}
+                {item.name === "NEX Fleet" && "Operator console for status, handoff, and remote assist — demo surface."}
+                {item.name === "NEX Skills" && "Vertical playbooks for hotels, jobsites, and indoor logistics."}
+                {item.name === "NEX Cloud" && "Planned fleet telemetry and skill distribution — not shipping yet."}
+              </p>
             </Link>
           ))}
         </div>
